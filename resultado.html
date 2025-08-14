@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado do Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Resultado</h1>
+    <div id="resultado"></div>
+    <button onclick="window.location.href='index.html'">Refazer Quiz</button>
+  </div>
+
+  <script>
+    const acertos = localStorage.getItem("quizAcertos");
+    const total = localStorage.getItem("quizTotal");
+    document.getElementById("resultado").innerHTML =
+      `Você acertou <strong>${acertos}</strong> de <strong>${total}</strong> perguntas.`;
+  </script>
+</body>
+</html>
